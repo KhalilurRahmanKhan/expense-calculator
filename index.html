@@ -4,9 +4,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Expense calculator</title>
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <h1>Expense calculator</h1>
     
+    <div class="container">
+        <div class="pic-container">
+            <img src="images/money.jpg" alt="">
+        </div>
+        <div class="form-container">
+                <b>Income</b>
+                <div class="form-group">
+                    <label for="salary">Salary:</label>
+                    <input type="number" id="salary">
+                    </div>
+                <b>Expenses</b>
+                <div class="form-group">
+                    <label for="">F:</label>
+                    <input type="number">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Salary:</label>
+                        <input type="number">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Salary:</label>
+                            <input type="number">
+                            </div>
+                            
+                            <p class="err-msg"  id="expense-err"></p>
+
+                            <button class="blue-btn" id="calculate-expenses">Calculate</button><br>
+                            <b>Total expenses: <span>5000</span></b>
+                            <b>Balance: <span>5000</span></b><br>
+
+                            <div class="">
+                                <label for="">Save:</label>
+                                <input type="number"> <span>%</span>
+
+                                <button class="blue-btn" id="calculate-saving">Calculate</button>
+                                <p class="err-msg"></p>
+
+
+
+                                </div>
+                                <b>Saving amount: <span>5000</span></b>
+                            <b>Remaining balance: <span>5000</span></b>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
 </body>
 </html>
