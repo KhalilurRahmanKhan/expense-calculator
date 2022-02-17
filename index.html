@@ -18,26 +18,27 @@
             <img src="images/money.jpg" alt="">
         </div>
         <div class="form-container">
+            <p id="err-msg"></p>
+
             <b>Income</b>
             <div class="form-group">
                 <label for="salary">Salary:</label>
-                <input type="number" id="salary">
+                <input type="number" id="salary" min="0">
             </div>
             <b>Expenses</b>
             <div class="form-group">
                 <label for="food">Food:</label>
-                <input type="number" id="food">
+                <input type="number" id="food" min="0">
             </div>
             <div class="form-group">
                 <label for="rent">Rent:</label>
-                <input type="number" id="rent">
+                <input type="number" id="rent" min="0">
             </div>
             <div class="form-group">
                 <label for="clothes">Clothes:</label>
-                <input type="number" id="clothes">
+                <input type="number" id="clothes" min="0">
             </div>
 
-            <p class="err-msg" id="expense-err"></p>
 
             <button class="blue-btn" id="calculate-expenses">Calculate</button><br>
             <b>Total expenses: <span id="total-expenses"></span></b>
@@ -45,10 +46,9 @@
 
             <div class="save-form">
                 <label for="save">Save:</label>
-                <input type="number" id="save"> <span> % </span>
+                <input type="number" id="save" min="0"> <span> % </span>
 
-                <button class="blue-btn" id="calculate-saving">Calculate</button>
-                <p class="err-msg"></p>
+                <button class="blue-btn" id="calculate-saving">Save</button>
             </div>
             <b>Saving amount: <span id="saving-amount"></span></b>
             <b>Remaining balance: <span id="remaining-balance"></span></b>

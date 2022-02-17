@@ -1,19 +1,23 @@
 function handleError(value){
-    document.getElementById("expense-err").innerText="";
 
-    
     if(isNaN(value)){
         return 0;
     }
     if(value < 0){
-        document.getElementById("expense-err").innerText="Value cannot be a negetive number";
-        return 0;
+        document.getElementById("err-msg").innerText="Value cannot be a negetive number";
+        return null;
     }
     
     return value;
+
 }
 
-function calculate(){
+
+
+document.getElementById("calculate-expenses").addEventListener("click",function(){
+    document.getElementById("err-msg").innerText="";
+
+
     let salary = handleError(parseFloat(document.getElementById("salary").value));
  
 
@@ -21,14 +25,13 @@ function calculate(){
     let rent = handleError(parseFloat(document.getElementById("rent").value));
     let clothes = handleError(parseFloat(document.getElementById("clothes").value));
 
-    let save = handleError(parseFloat(document.getElementById("save").value));
 
 
     let totalExpenses = food+rent+clothes;
     let balance = salary-totalExpenses;
 
     if(totalExpenses > salary){
-        document.getElementById("expense-err").innerText="Expenses exceed the balance";
+        document.getElementById("err-msg").innerText="Expenses exceed the balance";
 
     }
 
@@ -38,25 +41,37 @@ function calculate(){
     document.getElementById("balance").innerText=balance;
     }
 
-    let savingAmount = salary*(save/100);
-    let remainingBalance = balance-savingAmount;
+    document.getElementById("food").value="";
+    document.getElementById("rent").value="";
+    document.getElementById("clothes").value="";
+
 
     
-    document.getElementById("saving-amount").innerText=savingAmount;
-    document.getElementById("remaining-balance").innerText=remainingBalance;
-}
-
-
-document.getElementById("calculate-expenses").addEventListener("click",function(){
-
-    calculate();
   
 });
 
 document.getElementById("calculate-saving").addEventListener("click",function(){
+    document.getElementById("err-msg").innerText="";
 
 
-   calculate();
+   let salary = handleError(parseFloat(document.getElementById("salary").value));
+   let balance = handleError(parseFloat(document.getElementById("balance").innerText));
+
+    let save = handleError(parseFloat(document.getElementById("save").value));
+
+
+    let savingAmount = salary*(save/100);
+    let remainingBalance = balance-savingAmount;
+
+    if(savingAmount > balance){
+        document.getElementById("err-msg").innerText="Savings exceed the balance";
+
+    }
+    else{
+        document.getElementById("saving-amount").innerText=savingAmount;
+        document.getElementById("remaining-balance").innerText=remainingBalance;
+    }
+    document.getElementById("save").value="";
 
   
 });
