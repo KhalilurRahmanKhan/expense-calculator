@@ -1,3 +1,5 @@
+// error handle function
+
 function handleError(value){
 
     if(isNaN(value)){
@@ -13,19 +15,15 @@ function handleError(value){
 }
 
 
+// calculate expenses
 
 document.getElementById("calculate-expenses").addEventListener("click",function(){
     document.getElementById("err-msg").innerText="";
 
-
     let salary = handleError(parseFloat(document.getElementById("salary").value));
- 
-
     let food = handleError(parseFloat(document.getElementById("food").value));
     let rent = handleError(parseFloat(document.getElementById("rent").value));
     let clothes = handleError(parseFloat(document.getElementById("clothes").value));
-
-
 
     let totalExpenses = food+rent+clothes;
     let balance = salary-totalExpenses;
@@ -49,6 +47,9 @@ document.getElementById("calculate-expenses").addEventListener("click",function(
     
   
 });
+
+
+// calculate saving
 
 document.getElementById("calculate-saving").addEventListener("click",function(){
     document.getElementById("err-msg").innerText="";
