@@ -57,8 +57,11 @@ body h1{
     color: white;
     border: none;
     border-radius: 2px;
+    cursor: pointer;
 }
-
+.err-msg{
+    color: red;
+}
 @media only screen and (max-width: 640px){
    body{
        font-size: 12px;
