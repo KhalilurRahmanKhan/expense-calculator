@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,54 +9,53 @@
 
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <h1>Expense calculator</h1>
-    
+
     <div class="container">
         <div class="pic-container">
             <img src="images/money.jpg" alt="">
         </div>
         <div class="form-container">
-                <b>Income</b>
-                <div class="form-group">
-                    <label for="salary">Salary:</label>
-                    <input type="number" id="salary">
-                    </div>
-                <b>Expenses</b>
-                <div class="form-group">
-                    <label for="">F:</label>
-                    <input type="number">
-                    </div>
-                    <div class="form-group">
-                        <label for="">Salary:</label>
-                        <input type="number">
-                        </div>
-                        <div class="form-group">
-                            <label for="">Salary:</label>
-                            <input type="number">
-                            </div>
-                            
-                            <p class="err-msg"  id="expense-err"></p>
+            <b>Income</b>
+            <div class="form-group">
+                <label for="salary">Salary:</label>
+                <input type="number" id="salary">
+            </div>
+            <b>Expenses</b>
+            <div class="form-group">
+                <label for="food">Food:</label>
+                <input type="number" id="food">
+            </div>
+            <div class="form-group">
+                <label for="rent">Rent:</label>
+                <input type="number" id="rent">
+            </div>
+            <div class="form-group">
+                <label for="clothes">Clothes:</label>
+                <input type="number" id="clothes">
+            </div>
 
-                            <button class="blue-btn" id="calculate-expenses">Calculate</button><br>
-                            <b>Total expenses: <span>5000</span></b>
-                            <b>Balance: <span>5000</span></b><br>
+            <p class="err-msg" id="expense-err"></p>
 
-                            <div class="">
-                                <label for="">Save:</label>
-                                <input type="number"> <span>%</span>
+            <button class="blue-btn" id="calculate-expenses">Calculate</button><br>
+            <b>Total expenses: <span id="total-expenses">5000</span></b>
+            <b>Balance: <span id="balance">5000</span></b><br>
 
-                                <button class="blue-btn" id="calculate-saving">Calculate</button>
-                                <p class="err-msg"></p>
+            <div class="save-form">
+                <label for="save">Save:</label>
+                <input type="number" id="save"> <span> % </span>
 
-
-
-                                </div>
-                                <b>Saving amount: <span>5000</span></b>
-                            <b>Remaining balance: <span>5000</span></b>
+                <button class="blue-btn" id="calculate-saving">Calculate</button>
+                <p class="err-msg"></p>
+            </div>
+            <b>Saving amount: <span id="saving-amount">5000</span></b>
+            <b>Remaining balance: <span id="remaining-balance">5000</span></b>
         </div>
     </div>
 
     <script src="js/index.js"></script>
 </body>
+
 </html>
